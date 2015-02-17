@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+10.times do
+  spot = Spot.new({
+    name: Faker::Lorem.word,
+    zip: Faker::Address.zip_code,
+    rating: (1..5).to_a.sample
+  })
+  spot.save
+end

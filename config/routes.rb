@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  # get 'spots' => 'spots#index'
+
   get 'about' => 'pages#about'
 
   get 'contact' => 'pages#contact'
+  # get 'spots/:id' => 'spots#show', as: :spot
+
+  # get 'spots/:id/edit' => 'spots#edit', as: :edit_spot
+  # post 'spots/:id/update' => 'spots#update', as: :update_spot
 
 
+  resources :spots, only: [:index, :show, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

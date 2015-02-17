@@ -1,0 +1,9 @@
+
+<ul>
+  <% @spots.each do |beer| %>
+  <li>
+    <%= link_to beer.name, spot_path(beer)%>
+    <%=  beer.rating.to_s + " " + beer.zip %>
+  </li>
+  <% end %>
+</ul>

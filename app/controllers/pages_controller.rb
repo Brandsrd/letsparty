@@ -10,6 +10,8 @@ class PagesController < ApplicationController
   def home
     @date = Time.now
     @places = places
+
+    @spot = Spot.all.sample
   end
 
   def places

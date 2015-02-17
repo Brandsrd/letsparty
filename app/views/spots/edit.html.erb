@@ -1,0 +1,10 @@
+<h1>Updating spot</h1>
+<%= form_for @spot do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :zip %>
+  <%= f.text_field :zip %>
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+  <%= f.submit "Submit" %>
+<% end %>
